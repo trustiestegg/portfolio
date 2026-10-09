@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDIT: your name and a one-sentence description. These show up in
+       browser tabs, search results and link previews. -->
+  <title>Your Name, portfolio</title>
+  <meta name="description" content="Selected work by Your Name.">
+  <meta property="og:title" content="Your Name, portfolio">
+  <meta property="og:description" content="Selected work by Your Name.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="top">
+    <!-- EDIT: your name -->
+    <a class="top-name" href="#">Your Name</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <!-- EDIT: your name, split over two lines if it reads better -->
+      <h1>Your<br>Name</h1>
+      <!-- EDIT: one sentence on what you do and what you want next -->
+      <p class="intro-line">
+        I make [the kind of thing you make] for [who you make it for].
+        Currently [studying, working at, or looking for something].
+      </p>
+    </section>
+
+    <section id="work" class="work" aria-labelledby="work-title">
+      <h2 id="work-title">Selected work</h2>
+
+      <ol class="projects">
+        <!-- EDIT: one <li> per project, newest first. Copy a whole block
+             to add another, delete one to remove it. Swap the image by
+             replacing the file in /images or changing the src. -->
+        <li class="project">
+          <p class="project-year">2026</p>
+          <div class="project-text">
+            <h3><a href="https://github.com/trustiestegg">Project one</a></h3>
+            <p>One line on what this is and the problem it solves.</p>
+            <p class="project-meta">Your role. The tools you used.</p>
+          </div>
+          <img class="project-image" src="images/project-1.svg" alt="" width="480" height="360" loading="lazy">
+        </li>
+
+        <li class="project">
+          <p class="project-year">2025</p>
+          <div class="project-text">
+            <h3><a href="https://github.com/trustiestegg">Project two</a></h3>
+            <p>One line on what this is and the problem it solves.</p>
+            <p class="project-meta">Your role. The tools you used.</p>
+          </div>
+          <img class="project-image" src="images/project-2.svg" alt="" width="480" height="360" loading="lazy">
+        </li>
+
+        <li class="project">
+          <p class="project-year">2025</p>
+          <div class="project-text">
+            <h3><a href="https://github.com/trustiestegg">Project three</a></h3>
+            <p>One line on what this is and the problem it solves.</p>
+            <p class="project-meta">Your role. The tools you used.</p>
+          </div>
+          <img class="project-image" src="images/project-3.svg" alt="" width="480" height="360" loading="lazy">
+        </li>
+      </ol>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="about-body">
+        <!-- EDIT: two short paragraphs. What you do, how you got here,
+             what you're good at. -->
+        <p>
+          A short paragraph about you goes here: what you do, how you got
+          into it, and the kind of work you like most.
+        </p>
+        <p>
+          A second paragraph for what you're looking for next, or anything
+          that doesn't fit in a project description.
+        </p>
+      </div>
+      <!-- EDIT: quick facts. Add or remove rows freely. -->
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Your city</dd></div>
+        <div><dt>Working with</dt><dd>Tool, tool, tool</dd></div>
+        <div><dt>Open to</dt><dd>Internships, freelance, full-time</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer id="contact" class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <!-- EDIT: your email, in both places on this line -->
+    <a class="contact-email" href="mailto:you@example.com">you@example.com</a>
+    <!-- EDIT: your profile links -->
+    <ul class="contact-links">
+      <li><a href="https://github.com/trustiestegg">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
