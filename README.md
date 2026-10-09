@@ -1,25 +1,41 @@
 # portfolio
 
-My portfolio site. Plain HTML and CSS, no build step.
+My game art portfolio: a 3D room built with Three.js. Scrolling turns the camera from wall to wall, and selecting a piece opens it full size.
+
+Live at https://trustiestegg.github.io/portfolio/
+
+## What's on each wall
+
+1. The versus screen, taken apart into layers
+2. Character icons
+3. Cutscenes (silent previews on the wall, full clips with sound when opened)
+4. Banners, posters and scene art
 
 ## Files
 
-- `index.html`: all the content. Every spot to change is marked with an `EDIT:` comment.
-- `styles.css`: colors and fonts are set at the top of the file.
-- `images/`: project images and the favicon. The three `project-*.svg` files are placeholders.
+- `index.html`: the headings and text. Spots to change are marked with `EDIT:` comments.
+- `styles.css`: colours and fonts are set at the top of the file.
+- `js/data.js`: the list of every piece on every wall, plus the wall colours.
+- `js/main.js`: the 3D room.
+- `js/vendor/`: Three.js r170 (MIT licence, see `THREE-LICENSE.txt`).
+- `media/`: the images and videos.
 
-## Editing
+## Adding a piece
 
-1. Open `index.html` and search for `EDIT:`. Replace the placeholder text under each one.
-2. Put your own images in `images/` and point each project's `src` at them. A 4:3 image at least 960px wide looks best.
-3. To add a project, copy one whole `<li class="project">` block. To remove one, delete it.
+1. Put the file in the matching folder inside `media/`.
+2. Add a line for it to the right wall in `js/data.js`, with its width and height in pixels.
+3. Update that wall's `rows` so the counts add up to the number of pieces.
 
-Open `index.html` in a browser to preview your changes.
+A cutscene needs three files with the same name: the full clip (`name.mp4`), a small silent preview (`name-preview.mp4`) and a still (`name.jpg`).
 
-## Publishing with GitHub Pages
+## Previewing changes
 
-1. Push this folder to the `main` branch.
-2. On GitHub, open the repo's **Settings**, then **Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, and save.
+The page loads its scripts as modules, so opening `index.html` straight from the folder won't work. Run a small local server from this folder and open the address it prints:
 
-The site goes live at https://trustiestegg.github.io/portfolio/ a minute or two later.
+```
+python -m http.server
+```
+
+## Publishing
+
+Push to `main`. GitHub Pages redeploys the site in about a minute.
